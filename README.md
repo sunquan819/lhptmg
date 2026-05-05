@@ -89,28 +89,7 @@ def generate_signals(df: pd.DataFrame, params: dict) -> pd.DataFrame:
     return signals
 ```
 
-## API 接口
 
-### 数据接口
-- `GET /api/data/exchanges` - 获取支持的交易所
-- `GET /api/data/symbols/{exchange}` - 获取交易对列表
-- `GET /api/data/klines/{exchange}` - 获取 K 线数据
-- `GET /api/data/timeframes` - 获取时间周期列表
-- `GET /api/data/cache/status` - 查询缓存状态
-- `POST /api/data/cache/download` - 下载指定币种历史数据
-- `POST /api/data/cache/download-all` - 一键下载主流币种数据
 
-### 回测接口
-- `POST /api/backtest/run` - 运行回测
-- `GET /api/backtest/history` - 获取回测历史
 
-### 策略接口
-- `GET /api/strategies/` - 获取策略列表
-- `GET /api/strategies/{name}` - 获取策略详情
-- `POST /api/strategies/` - 创建自定义策略
-- `PUT /api/strategies/{name}` - 更新策略
-- `DELETE /api/strategies/{name}` - 删除策略
 
-## License
-
-MIT
