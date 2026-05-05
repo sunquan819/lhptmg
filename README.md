@@ -21,75 +21,18 @@
 - **数据处理**: pandas, numpy, CCXT
 - **存储**: SQLite
 
-## 项目结构
 
-```
-lhpt/
-├── backend/              # FastAPI 后端
-│   ├── app/
-│   │   ├── api/          # REST API 路由
-│   │   ├── core/         # 配置、数据库
-│   │   ├── models/       # SQLAlchemy 模型
-│   │   ├── services/     # 业务逻辑
-│   │   │   ├── data_loader.py
-│   │   │   ├── backtest.py
-│   │   │   └── strategy.py
-│   │   └── strategies/   # 内置策略
-│   ├── requirements.txt
-│   └── main.py
-│
-├── frontend/             # Next.js 前端
-│   ├── app/
-│   ├── components/
-│   │   ├── charts/       # K线图表
-│   │   ├── backtest/     # 回测面板
-│   │   └── strategy/     # 策略管理
-│   ├── lib/              # API 客户端
-│   └── package.json
-│
-├── strategies/           # 用户自定义策略目录
-│
-└── README.md
-```
 
 ## 快速开始
 
-### 1. 安装依赖
-
-```bash
-# 后端
-cd backend
-pip install -r requirements.txt
-
-# 前端
-cd frontend
-npm install
-```
 
 ### 2. 配置环境变量
 
-创建 `backend/.env` 文件:
 
-```env
-DATABASE_URL=sqlite:///./lhpt.db
-BINANCE_API_KEY=your_api_key
-BINANCE_API_SECRET=your_api_secret
-OKX_API_KEY=your_api_key
-OKX_API_SECRET=your_api_secret
-OKX_PASSPHRASE=your_passphrase
-```
 
 ### 3. 启动服务
 
-```bash
-# 后端 (端口 8000)
-cd backend
-uvicorn main:app --reload
 
-# 前端 (端口 3000)
-cd frontend
-npm run dev
-```
 
 ### 4. 访问界面
 
